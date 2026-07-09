@@ -68,7 +68,7 @@ export default function Hero({
                   "block reveal-pop",
                   i === lines.length - 1 && "shine-text animated-outline",
                   i === 0 && "stagger-1",
-                  i === 1 && "stagger-2",
+                  i === 1 && "stagger-2 pb-6",
                 )}
               >
                 {line}
@@ -102,7 +102,7 @@ export default function Hero({
         </div>
 
         <div className="reveal-pop stagger-3 relative mx-auto w-full max-w-md">
-          <div className="glass-panel hover-shine relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/50 transition-transform duration-500 hover:-translate-y-1">
+          <div className="glass-panel hover-shine relative aspect-4/5 overflow-hidden rounded-4xl border border-white/50 transition-transform duration-500 hover:-translate-y-1">
             <Image
               src={placeholderImage(imageSeed, 640, 800)}
               alt={imageAlt}
@@ -111,7 +111,7 @@ export default function Hero({
               className="object-cover transition-transform duration-700 hover:scale-[1.03]"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground/55 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-foreground/55 via-transparent to-transparent" />
 
             {imageCaption && (
               <div className="absolute bottom-5 left-5 rounded-xl bg-white/88 px-4 py-3 text-sm font-medium text-foreground backdrop-blur">
