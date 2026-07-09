@@ -3,6 +3,7 @@ import Hero from "@/components/ui/Hero";
 import ReelGallery from "@/components/ui/ReelGallery";
 import ServiceCardStack from "@/components/ui/ServiceCardStack";
 import ContactForm from "@/components/ui/ContactForm";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import { getHomePage, getServices, getSiteSettings } from "@/lib/content";
 import type {
   CardsSection,
@@ -44,7 +45,10 @@ export default function HomePage() {
 
       {reelsSection && (
         <section id="reels" className="px-6 py-16 md:py-20">
-          <div className="mx-auto max-w-6xl rounded-[2rem] bg-gradient-to-br from-secondary to-secondary/80 px-6 py-12 text-white md:px-8">
+          <ScrollReveal
+            className="mx-auto max-w-6xl rounded-[2rem] bg-gradient-to-br from-secondary to-secondary/80 px-6 py-12 text-white md:px-8"
+            delayMs={80}
+          >
             <SectionLabel className="text-white/60">Recent Work</SectionLabel>
             <h2 className="font-heading text-3xl font-bold md:text-4xl">
               {reelsSection.heading}
@@ -53,16 +57,19 @@ export default function HomePage() {
               {reelsSection.subheading}
             </p>
 
-            <div className="mt-10">
+            <ScrollReveal className="mt-10" delayMs={180}>
               <ReelGallery items={reelsSection.items} />
-            </div>
-          </div>
+            </ScrollReveal>
+          </ScrollReveal>
         </section>
       )}
 
       {aboutSection && (
         <section id="about" className="px-6 py-16 md:py-20">
-          <div className="section-shell mx-auto max-w-5xl px-6 py-12 text-center md:px-12">
+          <ScrollReveal
+            className="section-shell mx-auto max-w-5xl px-6 py-12 text-center md:px-12"
+            delayMs={100}
+          >
             <SectionLabel className="text-primary">About</SectionLabel>
             <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
               {aboutSection.heading}
@@ -70,13 +77,16 @@ export default function HomePage() {
             <p className="mt-6 text-lg leading-relaxed text-foreground/70">
               {aboutSection.body}
             </p>
-          </div>
+          </ScrollReveal>
         </section>
       )}
 
       {cardsSection && services.length > 0 && (
         <section id="rates" className="px-6 py-16 md:py-20">
-          <div className="mx-auto max-w-6xl rounded-[2rem] border border-primary/20 bg-gradient-to-br from-white via-white to-primary/10 px-6 py-12 md:px-8">
+          <ScrollReveal
+            className="mx-auto max-w-6xl rounded-[2rem] border border-primary/20 bg-gradient-to-br from-white via-white to-primary/10 px-6 py-12 md:px-8"
+            delayMs={120}
+          >
             <SectionLabel className="text-primary">
               Services &amp; Rates
             </SectionLabel>
@@ -88,22 +98,27 @@ export default function HomePage() {
               style, pacing, and delivery to your brand voice.
             </p>
 
-            <div className="mt-10">
+            <ScrollReveal className="mt-10" delayMs={220}>
               <ServiceCardStack services={services} />
-            </div>
-          </div>
+            </ScrollReveal>
+          </ScrollReveal>
         </section>
       )}
 
       {contactSection && (
         <section id="contact" className="px-6 py-16 md:py-20">
-          <div className="mx-auto max-w-3xl rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary via-primary/90 to-secondary px-6 py-12 text-white shadow-[0_24px_70px_rgba(108,92,231,0.24)] md:px-8">
+          <ScrollReveal
+            className="mx-auto max-w-3xl rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary via-primary/90 to-secondary px-6 py-12 text-white shadow-[0_24px_70px_rgba(108,92,231,0.24)] md:px-8"
+            delayMs={140}
+          >
             <h2 className="font-heading text-3xl font-bold md:text-4xl">
               {contactSection.heading}
             </h2>
             <p className="mt-4 text-lg text-white/90">{contactSection.body}</p>
-            <ContactForm />
-          </div>
+            <ScrollReveal delayMs={220}>
+              <ContactForm />
+            </ScrollReveal>
+          </ScrollReveal>
         </section>
       )}
     </>

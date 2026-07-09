@@ -28,16 +28,25 @@ type FilterValue = "All" | ReelPlatform;
  * bg-ink) instead of the library's ink/ink-soft tokens.
  */
 export default function ReelGallery({ items }: ReelGalleryProps) {
-  const platforms = Array.from(new Set(items.map((item) => item.platform))) as ReelPlatform[];
+  const platforms = Array.from(
+    new Set(items.map((item) => item.platform)),
+  ) as ReelPlatform[];
   const filters: FilterValue[] = ["All", ...platforms];
   const [filter, setFilter] = useState<FilterValue>("All");
 
   const indexed = items.map((item, index) => ({ item, index }));
-  const filtered = filter === "All" ? indexed : indexed.filter(({ item }) => item.platform === filter);
+  const filtered =
+    filter === "All"
+      ? indexed
+      : indexed.filter(({ item }) => item.platform === filter);
 
   return (
     <div>
-      <div className="mb-8 flex flex-wrap justify-center gap-2" role="group" aria-label="Filter reels by platform">
+      <div
+        className="mb-8 flex flex-wrap justify-center gap-2"
+        role="group"
+        aria-label="Filter reels by platform"
+      >
         {filters.map((f) => (
           <button
             key={f}
@@ -45,8 +54,10 @@ export default function ReelGallery({ items }: ReelGalleryProps) {
             onClick={() => setFilter(f)}
             aria-pressed={filter === f}
             className={cn(
-              "rounded-full px-4 py-2 text-sm font-medium transition-colors",
-              filter === f ? "bg-white text-secondary" : "text-white/70 hover:text-white"
+              "rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-0.5",
+              filter === f
+                ? "bg-white text-secondary shadow-lg shadow-black/10"
+                : "bg-white/8 text-white/75 hover:bg-white/14 hover:text-white",
             )}
           >
             {f === "All" ? "All" : PLATFORM_LABEL[f]}
@@ -56,7 +67,12 @@ export default function ReelGallery({ items }: ReelGalleryProps) {
 
       <div className="grid grid-cols-2 gap-4 transition-opacity duration-300 md:grid-cols-3 md:gap-6">
         {filtered.map(({ item, index }) => (
-          <ReelCard key={`${item.platform}-${index}`} reel={item} index={index} />
+          <div
+            key={`${item.platform}-${index}`}
+            className={cn("reveal-pop", `stagger-${(index % 4) + 1}`)}
+          >
+            <ReelCard reel={item} index={index} />
+          </div>
         ))}
       </div>
     </div>

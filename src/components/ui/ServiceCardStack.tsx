@@ -23,14 +23,20 @@ export default function ServiceCardStack({ services }: ServiceCardStackProps) {
         <div
           key={service.slug}
           style={{ transform: `rotate(${ROTATIONS[i % ROTATIONS.length]}deg)` }}
-          className="group w-full max-w-xs rounded-3xl border border-foreground/10 bg-white p-6 shadow-md transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-3 hover:z-10 focus-within:-translate-y-3 focus-within:z-10 sm:w-64"
+          className="group reveal-pop hover-shine w-full max-w-xs rounded-3xl border border-foreground/10 bg-white p-6 shadow-md transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-4 hover:z-10 focus-within:-translate-y-4 focus-within:z-10 sm:w-64"
         >
-          <p className="font-heading text-lg font-bold text-foreground">{service.name}</p>
+          <p className="font-heading text-lg font-bold text-foreground transition-transform duration-300 group-hover:translate-x-1">
+            {service.name}
+          </p>
           <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-secondary">
             {service.tagline}
           </p>
-          <p className="mt-4 text-sm text-foreground/70">{service.shortDescription}</p>
-          <p className="font-heading mt-6 text-xl font-bold text-foreground">{service.rate}</p>
+          <p className="mt-4 text-sm text-foreground/70">
+            {service.shortDescription}
+          </p>
+          <p className="font-heading mt-6 text-xl font-bold text-foreground">
+            {service.rate}
+          </p>
 
           {/* CTA stays visible on touch devices (no reliable hover); reveals on hover/focus at md+ */}
           <Button
