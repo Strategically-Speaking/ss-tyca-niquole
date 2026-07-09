@@ -82,9 +82,12 @@ export default function ReelCard({ reel, index }: ReelCardProps) {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
-          <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-start p-3">
+          <div className="pointer-events-none absolute inset-x-0 top-0 flex flex-wrap justify-start gap-1.5 p-3">
             <span className="inline-flex w-fit items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-foreground">
               {platformLabel[reel.platform]}
+            </span>
+            <span className="inline-flex w-fit items-center gap-1 rounded-full bg-secondary/90 px-3 py-1 text-xs font-semibold text-white">
+              {reel.category}
             </span>
           </div>
         </>
@@ -102,9 +105,14 @@ export default function ReelCard({ reel, index }: ReelCardProps) {
             className="object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 flex flex-col justify-between bg-linear-to-t from-black/75 via-black/5 to-transparent p-4 transition-opacity duration-300 group-hover:opacity-100">
-            <span className="inline-flex w-fit items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-foreground">
-              {platformLabel[reel.platform]}
-            </span>
+            <div className="flex flex-wrap gap-1.5">
+              <span className="inline-flex w-fit items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-foreground">
+                {platformLabel[reel.platform]}
+              </span>
+              <span className="inline-flex w-fit items-center gap-1 rounded-full bg-secondary/90 px-3 py-1 text-xs font-semibold text-white">
+                {reel.category}
+              </span>
+            </div>
             <span className="translate-y-1 flex items-center gap-1 text-sm font-medium text-white transition-transform duration-300 group-hover:translate-y-0">
               <Play className="h-4 w-4" aria-hidden="true" />
               {isPlaceholder ? "Coming soon" : reel.caption}

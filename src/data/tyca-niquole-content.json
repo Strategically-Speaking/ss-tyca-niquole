@@ -58,31 +58,37 @@
           "items": [
             {
               "platform": "instagram",
+              "category": "Campus Content",
               "url": "PLACEHOLDER — reel link pending",
               "caption": "Placeholder reel 1"
             },
             {
               "platform": "instagram",
+              "category": "Personal",
               "url": "PLACEHOLDER — reel link pending",
               "caption": "Placeholder reel 2"
             },
             {
               "platform": "tiktok",
+              "category": "Personal",
               "url": "https://www.tiktok.com/@scout2015/video/6718335390845095173",
               "caption": "TikTok test reel"
             },
             {
               "platform": "tiktok",
+              "category": "Brand Concept",
               "url": "PLACEHOLDER — reel link pending",
               "caption": "Placeholder reel 4"
             },
             {
               "platform": "youtube-shorts",
+              "category": "Campus Content",
               "url": "PLACEHOLDER — reel link pending",
               "caption": "Placeholder reel 5"
             },
             {
               "platform": "youtube-shorts",
+              "category": "Brand Concept",
               "url": "PLACEHOLDER — reel link pending",
               "caption": "Placeholder reel 6"
             }

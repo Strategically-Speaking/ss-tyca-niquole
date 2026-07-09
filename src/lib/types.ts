@@ -55,8 +55,11 @@ export interface Hero {
 
 export type ReelPlatform = "instagram" | "tiktok" | "youtube-shorts";
 
+export type ReelCategory = "Campus Content" | "Personal" | "Brand Concept";
+
 export interface ReelItem {
   platform: ReelPlatform;
+  category: ReelCategory;
   url: string;
   caption: string;
 }

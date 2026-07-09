@@ -45,28 +45,65 @@ export default function Header({ siteSettings }: HeaderProps) {
         <Link
           href="#top"
           onClick={() => setIsOpen(false)}
-          className="font-heading text-xl font-bold tracking-tight text-foreground"
+          className="font-heading text-3xl font-bold tracking-tight text-foreground"
         >
           {siteSettings.logo.text}
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
-          {siteSettings.nav.map((item) => {
-            const id = item.href.replace("#", "");
-            return (
-              <a
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  activeId === id ? "text-primary" : "text-foreground/70",
-                )}
-              >
-                {item.label}
-              </a>
-            );
-          })}
-        </nav>
+        <div className="hidden items-center gap-8 md:flex">
+          <nav className="flex items-center gap-8" aria-label="Primary">
+            {siteSettings.nav.map((item) => {
+              const id = item.href.replace("#", "");
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary",
+                    activeId === id ? "text-primary" : "text-foreground/70",
+                  )}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+          </nav>
+
+          {(siteSettings.social.instagram || siteSettings.social.tiktok || siteSettings.social.youtube) && (
+            <div className="flex items-center gap-4 border-l border-foreground/10 pl-6" aria-label="Social links">
+              {siteSettings.social.instagram && (
+                <a
+                  href={siteSettings.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold uppercase tracking-wide text-foreground/50 transition-colors hover:text-primary"
+                >
+                  IG
+                </a>
+              )}
+              {siteSettings.social.tiktok && (
+                <a
+                  href={siteSettings.social.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold uppercase tracking-wide text-foreground/50 transition-colors hover:text-primary"
+                >
+                  TT
+                </a>
+              )}
+              {siteSettings.social.youtube && (
+                <a
+                  href={siteSettings.social.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold uppercase tracking-wide text-foreground/50 transition-colors hover:text-primary"
+                >
+                  YT
+                </a>
+              )}
+            </div>
+          )}
+        </div>
 
         <button
           type="button"
@@ -101,6 +138,44 @@ export default function Header({ siteSettings }: HeaderProps) {
               </li>
             ))}
           </ul>
+
+          {(siteSettings.social.instagram || siteSettings.social.tiktok || siteSettings.social.youtube) && (
+            <div className="mt-4 flex items-center gap-5 border-t border-foreground/10 pt-4">
+              {siteSettings.social.instagram && (
+                <a
+                  href={siteSettings.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-medium text-foreground/60 hover:text-primary"
+                >
+                  Instagram
+                </a>
+              )}
+              {siteSettings.social.tiktok && (
+                <a
+                  href={siteSettings.social.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-medium text-foreground/60 hover:text-primary"
+                >
+                  TikTok
+                </a>
+              )}
+              {siteSettings.social.youtube && (
+                <a
+                  href={siteSettings.social.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-medium text-foreground/60 hover:text-primary"
+                >
+                  YouTube
+                </a>
+              )}
+            </div>
+          )}
         </nav>
       )}
     </header>

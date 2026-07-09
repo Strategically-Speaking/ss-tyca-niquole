@@ -34,7 +34,7 @@ export default function HomePage() {
     <>
       <Hero
         eyebrow={siteSettings.contact.address}
-        lines={["Let's makes content", "People actually watch."]}
+        lines={["Let's Makes Content", "People Actually Watch"]}
         subhead={hero.subheadline}
         ctaPrimary={hero.ctaPrimary}
         ctaSecondary={hero.ctaSecondary}
