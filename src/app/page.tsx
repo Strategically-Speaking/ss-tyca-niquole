@@ -3,7 +3,7 @@ import { Camera, Clapperboard, Sparkles, TrendingUp } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ReelCard from "@/components/ui/ReelCard";
-import ServiceCard from "@/components/ui/ServiceCard";
+import ServiceCardStack from "@/components/ui/ServiceCardStack";
 import ContactForm from "@/components/ui/ContactForm";
 import { getHomePage, getServices, getSiteSettings } from "@/lib/content";
 import { placeholderImage } from "@/lib/utils";
@@ -202,10 +202,8 @@ export default function HomePage() {
               style, pacing, and delivery to your brand voice.
             </p>
 
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {services.map((service) => (
-                <ServiceCard key={service.slug} service={service} />
-              ))}
+            <div className="mt-10">
+              <ServiceCardStack services={services} />
             </div>
           </div>
         </section>
