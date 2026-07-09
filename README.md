@@ -1,4 +1,4 @@
-# Tyca Strong Site
+# Tyca Niquole Site
 
 Portfolio site built with Next.js App Router.
 

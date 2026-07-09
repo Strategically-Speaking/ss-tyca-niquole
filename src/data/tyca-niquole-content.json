@@ -1,23 +1,23 @@
 {
   "siteSettings": {
-    "name": "Tyca Strong",
+    "name": "Tyca Niquole",
     "tagline": "Social-first video creator — Reels, TikToks, and Shorts made to stop the scroll.",
     "mission": "Creating scroll-stopping social video for brands and creators, one Reel at a time.",
     "logo": {
-      "text": "Tyca Strong",
+      "text": "Tyca Niquole",
       "hasImage": false,
       "imageAlt": ""
     },
     "contact": {
-      "email": "hello@tycastrongcreates.com",
+      "email": "hello@tycaniquolecreates.com",
       "phone": "",
       "address": "Burlington / Durham, NC area",
       "hours": ""
     },
     "social": {
-      "instagram": "https://instagram.com/tycastrongcreates",
-      "tiktok": "https://tiktok.com/@tycastrongcreates",
-      "youtube": "https://youtube.com/@tycastrongcreates",
+      "instagram": "https://instagram.com/tycaniquolecreates",
+      "tiktok": "https://tiktok.com/@tycaniquolecreates",
+      "youtube": "https://youtube.com/@tycaniquolecreates",
       "linkedin": "",
       "facebook": "",
       "twitter": ""
@@ -30,7 +30,7 @@
     ],
     "footer": {
       "tagline": "Let's make something worth the scroll.",
-      "copyright": "© 2026 Tyca Strong. All rights reserved."
+      "copyright": "© 2026 Tyca Niquole. All rights reserved."
     },
     "brand": {
       "primaryColor": "#FF3D71",
@@ -43,11 +43,11 @@
   "pages": {
     "home": {
       "hero": {
-        "headline": "Tyca Strong",
+        "headline": "Tyca Niquole",
         "subheadline": "Social-first video creator — Reels, TikToks, and Shorts made to stop the scroll.",
         "ctaPrimary": { "label": "Let's Work Together", "href": "#contact" },
         "ctaSecondary": { "label": "See the Reels", "href": "#reels" },
-        "imageAlt": "Tyca Strong holding a camera on set"
+        "imageAlt": "Tyca Niquole holding a camera on set"
       },
       "sections": [
         {
@@ -92,7 +92,7 @@
           "id": "about",
           "type": "text",
           "heading": "About Tyca",
-          "body": "Tyca Strong is a Burlington/Durham, NC-based social video creator who combines production technique with marketing strategy to create content that feels cinematic, clear, and conversion-focused. With academic training in Video Production, Digital Editing, and Marketing, she approaches each project with a full-funnel mindset: hook quickly, tell the story with intention, and end with a strong call to action. Tyca has produced content for campus organizations and emerging brands, leading projects from pre-production planning through final delivery. Her creative style blends energetic pacing, purposeful sound design, and platform-native storytelling so every Reel, TikTok, or Short is built to earn attention and keep it."
+          "body": "Tyca Niquole is a Burlington/Durham, NC-based social video creator who combines production technique with marketing strategy to create content that feels cinematic, clear, and conversion-focused. With academic training in Video Production, Digital Editing, and Marketing, she approaches each project with a full-funnel mindset: hook quickly, tell the story with intention, and end with a strong call to action. Tyca has produced content for campus organizations and emerging brands, leading projects from pre-production planning through final delivery. Her creative style blends energetic pacing, purposeful sound design, and platform-native storytelling so every Reel, TikTok, or Short is built to earn attention and keep it."
         },
         {
           "id": "rates",
@@ -108,13 +108,13 @@
           "body": "Have a project in mind? Send a message and let's talk about what you need.",
           "cta": {
             "label": "Email Tyca",
-            "href": "mailto:hello@tycastrongcreates.com"
+            "href": "mailto:hello@tycaniquolecreates.com"
           }
         }
       ],
       "seo": {
-        "title": "Tyca Strong — Social-First Video Creator | Reels, TikToks & Shorts",
-        "description": "Tyca Strong is a social-first video creator based in the Burlington/Durham, NC area, specializing in Reels, TikToks, and Shorts for brands and creators."
+        "title": "Tyca Niquole — Social-First Video Creator | Reels, TikToks & Shorts",
+        "description": "Tyca Niquole is a social-first video creator based in the Burlington/Durham, NC area, specializing in Reels, TikToks, and Shorts for brands and creators."
       }
     }
   },

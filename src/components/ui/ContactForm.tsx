@@ -60,7 +60,7 @@ export default function ContactForm() {
       <input
         type="hidden"
         name="_subject"
-        value="New project inquiry from tycastrongcreates.com"
+        value="New project inquiry from tycaniquolecreates.com"
       />
 
       <div className="grid gap-4 md:grid-cols-2">
