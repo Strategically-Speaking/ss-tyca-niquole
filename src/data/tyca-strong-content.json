@@ -56,19 +56,43 @@
           "heading": "Recent Work",
           "subheading": "A mix of brand, event, and personal content — embeds pull live view and like counts.",
           "items": [
-            { "platform": "instagram", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 1" },
-            { "platform": "instagram", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 2" },
-            { "platform": "tiktok", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 3" },
-            { "platform": "tiktok", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 4" },
-            { "platform": "youtube-shorts", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 5" },
-            { "platform": "youtube-shorts", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 6" }
+            {
+              "platform": "instagram",
+              "url": "PLACEHOLDER — reel link pending",
+              "caption": "Placeholder reel 1"
+            },
+            {
+              "platform": "instagram",
+              "url": "PLACEHOLDER — reel link pending",
+              "caption": "Placeholder reel 2"
+            },
+            {
+              "platform": "tiktok",
+              "url": "PLACEHOLDER — reel link pending",
+              "caption": "Placeholder reel 3"
+            },
+            {
+              "platform": "tiktok",
+              "url": "PLACEHOLDER — reel link pending",
+              "caption": "Placeholder reel 4"
+            },
+            {
+              "platform": "youtube-shorts",
+              "url": "PLACEHOLDER — reel link pending",
+              "caption": "Placeholder reel 5"
+            },
+            {
+              "platform": "youtube-shorts",
+              "url": "PLACEHOLDER — reel link pending",
+              "caption": "Placeholder reel 6"
+            }
           ]
         },
         {
           "id": "about",
           "type": "text",
           "heading": "About Tyca",
-          "body": "Tyca Strong is a Burlington/Durham, NC-based video creator and college student studying Video Production, Digital Video & Editing, and Marketing. She creates content for her college's Music Club and is building her own portfolio one Reel at a time. Before picking up a camera full-time, she worked the front desk at a gym — watching firsthand what makes fitness content actually stop the scroll."
+          "body": "Tyca Strong is a Burlington/Durham, NC-based social video creator who combines production technique with marketing strategy to create content that feels cinematic, clear, and conversion-focused. With academic training in Video Production, Digital Editing, and Marketing, she approaches each project with a full-funnel mindset: hook quickly, tell the story with intention, and end with a strong call to action. Tyca has produced content for campus organizations and emerging brands, leading projects from pre-production planning through final delivery. Her creative style blends energetic pacing, purposeful sound design, and platform-native storytelling so every Reel, TikTok, or Short is built to earn attention and keep it."
         },
         {
           "id": "rates",
@@ -82,7 +106,10 @@
           "type": "cta",
           "heading": "Let's work together",
           "body": "Have a project in mind? Send a message and let's talk about what you need.",
-          "cta": { "label": "Email Tyca", "href": "mailto:hello@tycastrongcreates.com" }
+          "cta": {
+            "label": "Email Tyca",
+            "href": "mailto:hello@tycastrongcreates.com"
+          }
         }
       ],
       "seo": {

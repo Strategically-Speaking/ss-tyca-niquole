@@ -15,7 +15,9 @@ export default function Header({ siteSettings }: HeaderProps) {
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
-    const sectionIds = siteSettings.nav.map((item) => item.href.replace("#", ""));
+    const sectionIds = siteSettings.nav.map((item) =>
+      item.href.replace("#", ""),
+    );
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => Boolean(el));
@@ -30,7 +32,7 @@ export default function Header({ siteSettings }: HeaderProps) {
           }
         });
       },
-      { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -38,7 +40,7 @@ export default function Header({ siteSettings }: HeaderProps) {
   }, [siteSettings.nav]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-black/5 bg-surface/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-foreground/10 bg-surface/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="#top"
@@ -57,7 +59,7 @@ export default function Header({ siteSettings }: HeaderProps) {
                 href={item.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
-                  activeId === id ? "text-primary" : "text-foreground/70"
+                  activeId === id ? "text-primary" : "text-foreground/70",
                 )}
               >
                 {item.label}
@@ -73,12 +75,19 @@ export default function Header({ siteSettings }: HeaderProps) {
           aria-expanded={isOpen}
           onClick={() => setIsOpen((prev) => !prev)}
         >
-          {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
+          {isOpen ? (
+            <X className="h-6 w-6" aria-hidden="true" />
+          ) : (
+            <Menu className="h-6 w-6" aria-hidden="true" />
+          )}
         </button>
       </div>
 
       {isOpen && (
-        <nav className="border-t border-black/5 bg-surface px-6 py-4 md:hidden" aria-label="Mobile">
+        <nav
+          className="border-t border-foreground/10 bg-surface px-6 py-4 md:hidden"
+          aria-label="Mobile"
+        >
           <ul className="flex flex-col gap-4">
             {siteSettings.nav.map((item) => (
               <li key={item.href}>
