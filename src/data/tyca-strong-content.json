@@ -1,0 +1,126 @@
+{
+  "siteSettings": {
+    "name": "Tyca Strong",
+    "tagline": "Social-first video creator — Reels, TikToks, and Shorts made to stop the scroll.",
+    "mission": "Creating scroll-stopping social video for brands and creators, one Reel at a time.",
+    "logo": {
+      "text": "Tyca Strong",
+      "hasImage": false,
+      "imageAlt": ""
+    },
+    "contact": {
+      "email": "hello@tycastrongcreates.com",
+      "phone": "",
+      "address": "Burlington / Durham, NC area",
+      "hours": ""
+    },
+    "social": {
+      "instagram": "https://instagram.com/tycastrongcreates",
+      "tiktok": "https://tiktok.com/@tycastrongcreates",
+      "youtube": "https://youtube.com/@tycastrongcreates",
+      "linkedin": "",
+      "facebook": "",
+      "twitter": ""
+    },
+    "nav": [
+      { "label": "Reels", "href": "#reels" },
+      { "label": "About", "href": "#about" },
+      { "label": "Rates", "href": "#rates" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "footer": {
+      "tagline": "Let's make something worth the scroll.",
+      "copyright": "© 2026 Tyca Strong. All rights reserved."
+    },
+    "brand": {
+      "primaryColor": "#FF3D71",
+      "secondaryColor": "#6C5CE7",
+      "backgroundColor": "#FAFAFA",
+      "headingFont": "Bricolage Grotesque",
+      "bodyFont": "Inter"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "headline": "Tyca Strong",
+        "subheadline": "Social-first video creator — Reels, TikToks, and Shorts made to stop the scroll.",
+        "ctaPrimary": { "label": "Let's Work Together", "href": "#contact" },
+        "ctaSecondary": { "label": "See the Reels", "href": "#reels" },
+        "imageAlt": "Tyca Strong holding a camera on set"
+      },
+      "sections": [
+        {
+          "id": "reels",
+          "type": "video-grid",
+          "heading": "Recent Work",
+          "subheading": "A mix of brand, event, and personal content — embeds pull live view and like counts.",
+          "items": [
+            { "platform": "instagram", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 1" },
+            { "platform": "instagram", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 2" },
+            { "platform": "tiktok", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 3" },
+            { "platform": "tiktok", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 4" },
+            { "platform": "youtube-shorts", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 5" },
+            { "platform": "youtube-shorts", "url": "PLACEHOLDER — reel link pending", "caption": "Placeholder reel 6" }
+          ]
+        },
+        {
+          "id": "about",
+          "type": "text",
+          "heading": "About Tyca",
+          "body": "Tyca Strong is a Burlington/Durham, NC-based video creator and college student studying Video Production, Digital Video & Editing, and Marketing. She creates content for her college's Music Club and is building her own portfolio one Reel at a time. Before picking up a camera full-time, she worked the front desk at a gym — watching firsthand what makes fitness content actually stop the scroll."
+        },
+        {
+          "id": "rates",
+          "type": "cards",
+          "heading": "Services & Rates",
+          "subheading": "Simple, flexible options depending on what you need.",
+          "items": "ref:services"
+        },
+        {
+          "id": "contact",
+          "type": "cta",
+          "heading": "Let's work together",
+          "body": "Have a project in mind? Send a message and let's talk about what you need.",
+          "cta": { "label": "Email Tyca", "href": "mailto:hello@tycastrongcreates.com" }
+        }
+      ],
+      "seo": {
+        "title": "Tyca Strong — Social-First Video Creator | Reels, TikToks & Shorts",
+        "description": "Tyca Strong is a social-first video creator based in the Burlington/Durham, NC area, specializing in Reels, TikToks, and Shorts for brands and creators."
+      }
+    }
+  },
+  "services": [
+    {
+      "slug": "shoot-only",
+      "name": "Shoot Only",
+      "tagline": "You've got the concept, I'll get the footage.",
+      "shortDescription": "On-location filming for Reels, TikToks, and Shorts.",
+      "fullDescription": "",
+      "rate": "$75–$125 per session — PLACEHOLDER, confirm before launch",
+      "cta": { "label": "Get a quote", "href": "#contact" },
+      "imageAlt": ""
+    },
+    {
+      "slug": "edit-only",
+      "name": "Edit Only",
+      "tagline": "Send me the raw footage, I'll make it scroll-worthy.",
+      "shortDescription": "Editing, pacing, captions, and sound design for existing footage.",
+      "fullDescription": "",
+      "rate": "$50–$100 per video — PLACEHOLDER, confirm before launch",
+      "cta": { "label": "Get a quote", "href": "#contact" },
+      "imageAlt": ""
+    },
+    {
+      "slug": "shoot-and-edit",
+      "name": "Shoot + Edit",
+      "tagline": "Full-service, start to finish.",
+      "shortDescription": "Filming and editing handled end-to-end.",
+      "fullDescription": "",
+      "rate": "$125–$225 per project — PLACEHOLDER, confirm before launch",
+      "cta": { "label": "Get a quote", "href": "#contact" },
+      "imageAlt": ""
+    }
+  ]
+}
