@@ -97,7 +97,7 @@
         {
           "id": "rates",
           "type": "cards",
-          "heading": "Services & Rates",
+          "heading": "Rates",
           "subheading": "Simple, flexible options depending on what you need.",
           "items": "ref:services"
         },
