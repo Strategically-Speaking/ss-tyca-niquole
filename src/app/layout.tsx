@@ -34,7 +34,7 @@ export default function RootLayout({
       lang="en"
       className={`${bricolage.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-surface text-foreground">
+      <body className="flex min-h-full flex-col text-foreground">
         <SkipLink />
         <Header siteSettings={siteSettings} />
         <main id="main-content" className="flex-1">

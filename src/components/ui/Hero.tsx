@@ -40,20 +40,7 @@ export default function Hero({
       id="top"
       className="relative overflow-hidden px-6 pb-12 pt-10 md:pb-20 md:pt-16"
     >
-      <span
-        className="hero-orb float-slow -left-8 top-28 -z-10 h-44 w-44 bg-primary/25"
-        aria-hidden="true"
-      />
-      <span
-        className="hero-orb float-fast right-4 top-10 -z-10 h-36 w-36 bg-secondary/25"
-        aria-hidden="true"
-      />
-      <span
-        className="hero-orb drift-diagonal bottom-10 left-1/3 -z-10 h-24 w-24 bg-white/60"
-        aria-hidden="true"
-      />
-
-      <div className="section-shell pulse-glow mx-auto grid max-w-6xl items-center gap-10 overflow-hidden px-6 py-12 md:grid-cols-[1.1fr_0.9fr] md:gap-12 md:px-10 md:py-16 lg:py-20">
+      <div className="section-shell hero-vibrant-shell relative z-10 mx-auto grid max-w-6xl items-center gap-10 overflow-hidden px-6 py-12 md:grid-cols-[1.1fr_0.9fr] md:gap-12 md:px-10 md:py-16 lg:py-20">
         <div className="reveal-soft">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/15 bg-white/80 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-secondary backdrop-blur">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
