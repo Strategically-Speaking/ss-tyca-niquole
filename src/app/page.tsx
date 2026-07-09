@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Camera, Clapperboard, Sparkles, TrendingUp } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionLabel from "@/components/ui/SectionLabel";
-import ReelCard from "@/components/ui/ReelCard";
+import ReelGallery from "@/components/ui/ReelGallery";
 import ServiceCardStack from "@/components/ui/ServiceCardStack";
 import ContactForm from "@/components/ui/ContactForm";
 import { getHomePage, getServices, getSiteSettings } from "@/lib/content";
@@ -161,14 +161,8 @@ export default function HomePage() {
               {reelsSection.subheading}
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
-              {reelsSection.items.map((reel, index) => (
-                <ReelCard
-                  key={`${reel.platform}-${index}`}
-                  reel={reel}
-                  index={index}
-                />
-              ))}
+            <div className="mt-10">
+              <ReelGallery items={reelsSection.items} />
             </div>
           </div>
         </section>
