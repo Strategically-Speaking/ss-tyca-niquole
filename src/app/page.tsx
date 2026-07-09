@@ -97,7 +97,7 @@ export default function HomePage() {
 
       {contactSection && (
         <section id="contact" className="px-6 py-16 md:py-20">
-          <div className="mx-auto max-w-3xl rounded-[2rem] bg-gradient-to-br from-foreground via-foreground to-primary/95 px-6 py-12 text-white shadow-2xl md:px-8">
+          <div className="mx-auto max-w-3xl rounded-[2rem] border border-primary/20 bg-gradient-to-br from-primary via-primary/90 to-secondary px-6 py-12 text-white shadow-[0_24px_70px_rgba(108,92,231,0.24)] md:px-8">
             <h2 className="font-heading text-3xl font-bold md:text-4xl">
               {contactSection.heading}
             </h2>

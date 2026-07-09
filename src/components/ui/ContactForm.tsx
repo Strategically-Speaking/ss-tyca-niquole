@@ -73,7 +73,7 @@ export default function ContactForm() {
             id="contact-name"
             name="name"
             required
-            className="mt-2 w-full rounded-xl border border-white/30 bg-white/90 px-4 py-3 text-sm text-foreground outline-none transition focus:border-white"
+            className="mt-2 w-full rounded-xl border border-white/35 bg-white/96 px-4 py-3 text-sm text-foreground shadow-sm outline-none transition focus:border-secondary focus:ring-2 focus:ring-white/30"
             placeholder="Your name"
           />
         </label>
@@ -88,7 +88,7 @@ export default function ContactForm() {
             name="email"
             required
             type="email"
-            className="mt-2 w-full rounded-xl border border-white/30 bg-white/90 px-4 py-3 text-sm text-foreground outline-none transition focus:border-white"
+            className="mt-2 w-full rounded-xl border border-white/35 bg-white/96 px-4 py-3 text-sm text-foreground shadow-sm outline-none transition focus:border-secondary focus:ring-2 focus:ring-white/30"
             placeholder="you@gmail.com"
           />
         </label>
@@ -104,7 +104,7 @@ export default function ContactForm() {
           name="service"
           required
           defaultValue=""
-          className="mt-2 w-full rounded-xl border border-white/30 bg-white/90 px-4 py-3 text-sm text-foreground outline-none transition focus:border-white"
+          className="mt-2 w-full rounded-xl border border-white/35 bg-white/96 px-4 py-3 text-sm text-foreground shadow-sm outline-none transition focus:border-secondary focus:ring-2 focus:ring-white/30"
         >
           <option value="" disabled>
             Choose a service
@@ -126,26 +126,26 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="mt-2 w-full rounded-xl border border-white/30 bg-white/90 px-4 py-3 text-sm text-foreground outline-none transition focus:border-white"
+          className="mt-2 w-full rounded-xl border border-white/35 bg-white/96 px-4 py-3 text-sm text-foreground shadow-sm outline-none transition focus:border-secondary focus:ring-2 focus:ring-white/30"
           placeholder="Tell me about your project, timeline, and goals"
         />
       </label>
 
       {!formsubmitEmail && (
-        <p className="rounded-xl border border-yellow-300/60 bg-yellow-200/20 px-4 py-3 text-sm text-yellow-50">
+        <p className="rounded-xl border border-white/30 bg-white/14 px-4 py-3 text-sm text-white/90">
           Add NEXT_PUBLIC_FORMSUBMIT_EMAIL in your .env.local to activate this
           form.
         </p>
       )}
 
       {status === "success" && (
-        <p className="rounded-xl border border-emerald-300/40 bg-emerald-300/20 px-4 py-3 text-sm text-emerald-50">
+        <p className="rounded-xl border border-emerald-200/45 bg-emerald-300/18 px-4 py-3 text-sm text-white">
           Message sent. Tyca will get back to you soon.
         </p>
       )}
 
       {status === "error" && (
-        <p className="rounded-xl border border-rose-300/40 bg-rose-300/20 px-4 py-3 text-sm text-rose-50">
+        <p className="rounded-xl border border-rose-200/45 bg-rose-300/18 px-4 py-3 text-sm text-white">
           Submission failed. Please try again in a moment.
         </p>
       )}
@@ -153,7 +153,7 @@ export default function ContactForm() {
       <Button
         type="submit"
         variant="secondary"
-        className="mt-2 w-full bg-white text-foreground hover:bg-white/90"
+        className="mt-2 w-full bg-white text-foreground hover:bg-white/92"
         disabled={!formsubmitEmail || isSubmitting}
       >
         <SendHorizontal className="mr-2 h-4 w-4" aria-hidden="true" />
