@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { SendHorizontal } from "lucide-react";
 import Button from "@/components/ui/Button";
 
@@ -9,9 +9,14 @@ const formEndpoint = formsubmitEmail
   ? `https://formsubmit.co/ajax/${encodeURIComponent(formsubmitEmail)}`
   : "";
 
+// Bots that fill hidden fields or submit within a couple seconds of page
+// load get silently dropped before ever reaching the network.
+const MIN_FILL_TIME_MS = 2000;
+
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const mountedAt = useRef(Date.now());
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -22,6 +27,15 @@ export default function ContactForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+
+    if (formData.get("_honey")) {
+      form.reset();
+      return;
+    }
+
+    if (Date.now() - mountedAt.current < MIN_FILL_TIME_MS) {
+      return;
+    }
 
     setIsSubmitting(true);
     setStatus("idle");
@@ -61,6 +75,11 @@ export default function ContactForm() {
         type="hidden"
         name="_subject"
         value="New project inquiry from tycaniquolecreates.com"
+      />
+      <input
+        type="hidden"
+        name="_blacklist"
+        value="viagra, casino, crypto, forex, backlinks, seo services, loan, bitcoin"
       />
 
       <div className="grid gap-4 md:grid-cols-2">

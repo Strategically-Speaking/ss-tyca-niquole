@@ -1,11 +1,15 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 
 const formsubmitEmail = process.env.NEXT_PUBLIC_FORMSUBMIT_EMAIL;
 const formEndpoint = formsubmitEmail
   ? `https://formsubmit.co/ajax/${encodeURIComponent(formsubmitEmail)}`
   : "";
+
+// Bots that fill hidden fields or submit within a couple seconds of page
+// load get silently dropped before ever reaching the network.
+const MIN_FILL_TIME_MS = 2000;
 
 /**
  * Newsletter form embedded directly inside the footer band, adapted from
@@ -20,6 +24,7 @@ const formEndpoint = formsubmitEmail
 export default function NewsletterSignup() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const mountedAt = useRef(Date.now());
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -30,6 +35,15 @@ export default function NewsletterSignup() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+
+    if (formData.get("_honey")) {
+      form.reset();
+      return;
+    }
+
+    if (Date.now() - mountedAt.current < MIN_FILL_TIME_MS) {
+      return;
+    }
 
     setIsSubmitting(true);
     setStatus("idle");
@@ -64,6 +78,11 @@ export default function NewsletterSignup() {
       <form className="mx-auto mt-4 flex max-w-sm gap-2" onSubmit={handleSubmit}>
         <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
         <input type="hidden" name="_subject" value="New newsletter signup from tycaniquolecreates.com" />
+        <input
+          type="hidden"
+          name="_blacklist"
+          value="viagra, casino, crypto, forex, backlinks, seo services, loan, bitcoin"
+        />
 
         <label className="sr-only" htmlFor="newsletter-email">
           Email address
