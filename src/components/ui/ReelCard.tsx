@@ -79,7 +79,7 @@ export default function ReelCard({ reel, index }: ReelCardProps) {
             title={`${platformLabel[reel.platform]}: ${reel.caption}`}
             className="absolute inset-0 block h-full w-full border-0"
             loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
           <div className="pointer-events-none absolute inset-x-0 top-0 flex flex-wrap justify-start gap-1.5 p-3">
