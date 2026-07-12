@@ -15,7 +15,7 @@ const platformLabel: Record<ReelItem["platform"], string> = {
   instagram: "Instagram Reel",
   tiktok: "TikTok",
   "youtube-shorts": "YouTube Shorts",
-  capcut: "CapCut",
+  iphone: "iPhone",
 };
 
 // Instagram's public embed page renders a fixed layout — a profile header,

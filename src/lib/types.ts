@@ -57,7 +57,7 @@ export type ReelPlatform =
   | "instagram"
   | "tiktok"
   | "youtube-shorts"
-  | "capcut";
+  | "iphone";
 
 export type ReelCategory = "Campus Content" | "Personal" | "Brand Concept";
 
