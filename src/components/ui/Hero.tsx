@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Clapperboard, Sparkles, TrendingUp } from "lucide-react";
 import Button from "./Button";
-import { cn, placeholderImage } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import type { CtaLink } from "@/lib/types";
 
 interface HeroProps {
@@ -10,7 +10,6 @@ interface HeroProps {
   subhead: string;
   ctaPrimary: CtaLink;
   ctaSecondary?: CtaLink;
-  imageSeed: string;
   imageAlt: string;
   imageCaption?: string;
 }
@@ -31,7 +30,6 @@ export default function Hero({
   subhead,
   ctaPrimary,
   ctaSecondary,
-  imageSeed,
   imageAlt,
   imageCaption,
 }: HeroProps) {
@@ -91,7 +89,7 @@ export default function Hero({
         <div className="reveal-pop stagger-3 relative mx-auto w-full max-w-md">
           <div className="glass-panel hover-shine relative aspect-4/5 overflow-hidden rounded-4xl border border-white/50 transition-transform duration-500 hover:-translate-y-1">
             <Image
-              src={placeholderImage(imageSeed, 640, 800)}
+              src="/tycaniquole.jpg"
               alt={imageAlt}
               fill
               sizes="(min-width: 768px) 420px, 90vw"

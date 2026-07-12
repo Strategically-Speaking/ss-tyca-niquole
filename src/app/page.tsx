@@ -38,7 +38,6 @@ export default function HomePage() {
         subhead={hero.subheadline}
         ctaPrimary={hero.ctaPrimary}
         ctaSecondary={hero.ctaSecondary}
-        imageSeed="tyca-hero"
         imageAlt={hero.imageAlt}
         imageCaption="On-set + social-ready edits"
       />
