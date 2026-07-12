@@ -14,6 +14,17 @@ const platformLabel: Record<ReelItem["platform"], string> = {
   "youtube-shorts": "YouTube Shorts",
 };
 
+// Instagram's public embed page renders a fixed layout — a profile header,
+// then a 4:5 media box (`padding-bottom: 125%`), then a likes/share footer —
+// regardless of the iframe's own height. To make the reel fill a 9:16 card
+// we scale the iframe up until the 4:5 media box's height matches the card's
+// full height, then shift up by the header's rendered height so the media
+// box's top lands at the card's top (its bottom then lands past the card's
+// bottom, cropped away by the card's `overflow-hidden`).
+// scale = cardAspect(16/9) / mediaAspect(1.25) — see extractEmbedUrl().
+const INSTAGRAM_EMBED_SCALE = 1.43;
+const INSTAGRAM_EMBED_HEADER_OFFSET_PX = 54;
+
 function extractEmbedUrl(reel: ReelItem): string | null {
   if (reel.url.startsWith("PLACEHOLDER")) {
     return null;
@@ -66,8 +77,22 @@ function extractEmbedUrl(reel: ReelItem): string | null {
   return null;
 }
 
+// Matches the play button TikTok's own embed renders: a dark translucent
+// circle with a solid white triangle, optically centered (nudged right a
+// touch since a triangle's visual center sits left of its bounding box).
+function PlayButtonGlyph() {
+  return (
+    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-black/45 ring-1 ring-white/40 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+      <Play
+        className="h-6 w-6 translate-x-0.5 text-white"
+        fill="white"
+        aria-hidden="true"
+      />
+    </span>
+  );
+}
+
 export default function ReelCard({ reel, index }: ReelCardProps) {
-  const isPlaceholder = reel.url.startsWith("PLACEHOLDER");
   const embedUrl = extractEmbedUrl(reel);
 
   return (
@@ -78,6 +103,14 @@ export default function ReelCard({ reel, index }: ReelCardProps) {
             src={embedUrl}
             title={`${platformLabel[reel.platform]}: ${reel.caption}`}
             className="absolute inset-0 block h-full w-full border-0"
+            style={
+              reel.platform === "instagram"
+                ? {
+                    transformOrigin: "top center",
+                    transform: `scale(${INSTAGRAM_EMBED_SCALE}) translateY(-${INSTAGRAM_EMBED_HEADER_OFFSET_PX}px)`,
+                  }
+                : undefined
+            }
             loading="lazy"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -95,11 +128,7 @@ export default function ReelCard({ reel, index }: ReelCardProps) {
         <>
           <Image
             src={placeholderImage(`tyca-reel-${index}`, 450, 800)}
-            alt={
-              isPlaceholder
-                ? `Placeholder — ${platformLabel[reel.platform]} coming soon`
-                : reel.caption
-            }
+            alt={`Placeholder — ${platformLabel[reel.platform]} coming soon`}
             fill
             sizes="(min-width: 768px) 30vw, 45vw"
             className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -113,11 +142,14 @@ export default function ReelCard({ reel, index }: ReelCardProps) {
                 {reel.category}
               </span>
             </div>
-            <span className="translate-y-1 flex items-center gap-1 text-sm font-medium text-white transition-transform duration-300 group-hover:translate-y-0">
-              <Play className="h-4 w-4" aria-hidden="true" />
-              {isPlaceholder ? "Coming soon" : reel.caption}
+            <span className="flex items-center text-sm font-medium text-white">
+              Coming soon
             </span>
           </div>
+
+          <span className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-70">
+            <PlayButtonGlyph />
+          </span>
         </>
       )}
     </div>
