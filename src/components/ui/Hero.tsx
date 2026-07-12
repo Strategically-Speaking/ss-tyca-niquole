@@ -65,14 +65,14 @@ export default function Hero({
             {subhead}
           </p>
 
-          <div className="reveal-soft stagger-4 mt-8 flex flex-wrap gap-3">
+          {/* <div className="reveal-soft stagger-4 mt-8 flex flex-wrap gap-3">
             <span className="rounded-full border border-foreground/10 bg-white/80 px-4 py-2 text-sm font-medium text-foreground/70 backdrop-blur">
               Reels that hook fast
             </span>
             <span className="rounded-full border border-foreground/10 bg-white/80 px-4 py-2 text-sm font-medium text-foreground/70 backdrop-blur">
               Edits with energy
             </span>
-          </div>
+          </div> */}
 
           <div className="reveal-soft stagger-4 mt-10 flex flex-wrap gap-4">
             <Button href={ctaPrimary.href} variant="primary">
