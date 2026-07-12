@@ -72,7 +72,7 @@ export default function NewsletterSignup() {
     <div className="border-t border-foreground/10 bg-foreground/[0.03] px-6 py-10 text-center md:px-10">
       <p className="font-heading text-lg font-semibold text-foreground">Get updates from Tyca</p>
       <p className="mx-auto mt-1 max-w-sm text-sm text-foreground/60">
-        New reels, availability, and behind-the-scenes — no spam.
+        New reels, availability, and behind-the-scenes.
       </p>
 
       <form className="mx-auto mt-4 flex max-w-sm gap-2" onSubmit={handleSubmit}>
