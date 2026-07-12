@@ -41,6 +41,12 @@ export default function ScrollReveal({
       return;
     }
 
+    // On mobile's shorter viewport, requiring 18% of a section visible plus
+    // an 8%-shrunk bottom margin means users have to scroll well past a
+    // section before it reveals. Trigger earlier there so content keeps
+    // pace with the scroll instead of lagging behind it.
+    const isNarrowViewport = window.matchMedia("(max-width: 767px)").matches;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry?.isIntersecting) {
@@ -49,8 +55,8 @@ export default function ScrollReveal({
         }
       },
       {
-        threshold: 0.18,
-        rootMargin: "0px 0px -8% 0px",
+        threshold: isNarrowViewport ? 0.01 : 0.18,
+        rootMargin: isNarrowViewport ? "0px 0px 15% 0px" : "0px 0px -8% 0px",
       },
     );
 
