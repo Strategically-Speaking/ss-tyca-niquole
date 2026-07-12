@@ -53,7 +53,11 @@ export interface Hero {
   imageAlt: string;
 }
 
-export type ReelPlatform = "instagram" | "tiktok" | "youtube-shorts";
+export type ReelPlatform =
+  | "instagram"
+  | "tiktok"
+  | "youtube-shorts"
+  | "capcut";
 
 export type ReelCategory = "Campus Content" | "Personal" | "Brand Concept";
 
@@ -62,6 +66,8 @@ export interface ReelItem {
   category: ReelCategory;
   url: string;
   caption: string;
+  /** Poster thumbnail for a locally-hosted video (url starting with "/"). */
+  poster?: string;
 }
 
 export interface ReelsSection {

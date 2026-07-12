@@ -13,6 +13,7 @@ const PLATFORM_LABEL: Record<ReelPlatform, string> = {
   instagram: "Instagram",
   tiktok: "TikTok",
   "youtube-shorts": "YouTube Shorts",
+  capcut: "CapCut",
 };
 
 type PlatformFilter = "All" | ReelPlatform;

@@ -41,6 +41,23 @@ export default function HomePage() {
         imageAlt={hero.imageAlt}
         imageCaption="On-set + social-ready edits"
       />
+      
+      {aboutSection && (
+        <section id="about" className="px-6 py-16 md:py-20">
+          <ScrollReveal
+            className="section-shell mx-auto max-w-5xl px-6 py-12 text-center md:px-12"
+            delayMs={100}
+          >
+            <SectionLabel className="text-primary">About</SectionLabel>
+            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
+              {aboutSection.heading}
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-foreground/70">
+              {aboutSection.body}
+            </p>
+          </ScrollReveal>
+        </section>
+      )}
 
       {reelsSection && (
         <section id="reels" className="px-6 py-16 md:py-20">
@@ -59,23 +76,6 @@ export default function HomePage() {
             <ScrollReveal className="mt-10" delayMs={180}>
               <ReelGallery items={reelsSection.items} />
             </ScrollReveal>
-          </ScrollReveal>
-        </section>
-      )}
-
-      {aboutSection && (
-        <section id="about" className="px-6 py-16 md:py-20">
-          <ScrollReveal
-            className="section-shell mx-auto max-w-5xl px-6 py-12 text-center md:px-12"
-            delayMs={100}
-          >
-            <SectionLabel className="text-primary">About</SectionLabel>
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
-              {aboutSection.heading}
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/70">
-              {aboutSection.body}
-            </p>
           </ScrollReveal>
         </section>
       )}

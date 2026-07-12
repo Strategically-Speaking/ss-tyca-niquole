@@ -23,8 +23,8 @@
       "twitter": ""
     },
     "nav": [
-      { "label": "Reels", "href": "#reels" },
       { "label": "About", "href": "#about" },
+      { "label": "Reels", "href": "#reels" },
       { "label": "Rates", "href": "#rates" },
       { "label": "Contact", "href": "#contact" }
     ],
@@ -64,33 +64,36 @@
             },
             {
               "platform": "instagram",
-              "category": "Personal",
-              "url": "PLACEHOLDER — reel link pending",
-              "caption": "Placeholder reel 2"
-            },
-            {
-              "platform": "tiktok",
-              "category": "Personal",
-              "url": "https://www.tiktok.com/@scout2015/video/6718335390845095173",
-              "caption": "TikTok test reel"
-            },
-            {
-              "platform": "tiktok",
-              "category": "Brand Concept",
-              "url": "PLACEHOLDER — reel link pending",
-              "caption": "Placeholder reel 4"
-            },
-            {
-              "platform": "youtube-shorts",
               "category": "Campus Content",
-              "url": "PLACEHOLDER — reel link pending",
-              "caption": "Placeholder reel 5"
+              "url": "https://www.instagram.com/reel/DWjojSkDiM7/g",
+              "caption": "Behind the Scenes"
             },
             {
-              "platform": "youtube-shorts",
-              "category": "Brand Concept",
-              "url": "PLACEHOLDER — reel link pending",
-              "caption": "Placeholder reel 6"
+              "platform": "instagram",
+              "category": "Campus Content",
+              "url": "https://www.instagram.com/reel/DaWdQ7VuP15/",
+              "caption": "Campus Content"
+            },
+            {
+              "platform": "capcut",
+              "category": "Personal",
+              "url": "/videos/planetfitness.mp4",
+              "poster": "/videos/planetfitness-poster.jpg",
+              "caption": "Planet Fitness"
+            },
+            {
+              "platform": "capcut",
+              "category": "Personal",
+              "url": "/videos/renfest1.mp4",
+              "poster": "/videos/renfest1-poster.jpg",
+              "caption": "Renaissance Festival"
+            },
+            {
+              "platform": "capcut",
+              "category": "Personal",
+              "url": "/videos/renfest2.mp4",
+              "poster": "/videos/renfest2-poster.jpg",
+              "caption": "Renaissance Festival"
             }
           ]
         },
