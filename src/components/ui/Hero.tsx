@@ -110,13 +110,12 @@ export default function Hero({
               </div>
             )}
           </div>
-
-          <div className="float-fast absolute -right-3 top-8 rounded-2xl border border-primary/15 bg-white/85 px-4 py-3 text-sm font-semibold text-foreground shadow-lg backdrop-blur md:-right-8">
+          {/* <div className="float-fast absolute -right-3 top-8 rounded-2xl border border-primary/15 bg-white/85 px-4 py-3 text-sm font-semibold text-foreground shadow-lg backdrop-blur md:-right-8">
             <p className="flex items-center gap-2">
               <TrendingUp className="h-4 w-4 text-primary" aria-hidden="true" />
               Scroll-stopping pacing
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
