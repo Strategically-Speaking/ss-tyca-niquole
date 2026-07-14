@@ -1,3 +1,4 @@
+import Link from "next/link";
 import NewsletterSignup from "@/components/ui/NewsletterSignup";
 import type { SiteSettings } from "@/lib/types";
 
@@ -61,8 +62,11 @@ export default function Footer({ siteSettings }: FooterProps) {
         </div>
       </div>
 
-      <div className="border-t border-black/5 px-6 py-4 text-center text-xs text-foreground/50">
-        {footer.copyright}
+      <div className="flex flex-col items-center gap-2 border-t border-black/5 px-6 py-4 text-center text-xs text-foreground/50 md:flex-row md:justify-between">
+        <p>{footer.copyright}</p>
+        <Link href="/privacy" className="hover:text-primary">
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );
